@@ -1,0 +1,16 @@
+rule creditcard
+{
+ strings:
+ $a=/(\d{16})/
+ condition:
+ $a
+}
+
+rule buscartarjetas
+{
+ strings:
+ $a=/(\d{4})-?(\d{4})-?(\d{4})-?(\d{4})/
+ condition:
+ $a
+}
+
